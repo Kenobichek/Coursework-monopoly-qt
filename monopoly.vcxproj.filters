@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{a070dd8c-0fbb-441b-9848-1fd6c4e9a546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Cells">
+      <UniqueIdentifier>{42b33a4a-0d0f-467a-a32c-e8974e771bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Factory">
+      <UniqueIdentifier>{4b025552-a1fa-41f3-95c4-5cf860456be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Game">
+      <UniqueIdentifier>{9002277b-dece-4bdf-a885-eee416e28eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Player">
+      <UniqueIdentifier>{7acb2e93-de79-4f61-8f81-beb89b95c8ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{37b5cdb7-b3e0-46dc-abd7-bc5af2fd4ad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resourses">
+      <UniqueIdentifier>{8eac22f5-974a-4fce-9cca-1fcf89e06fd8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Cells\Business.cpp">
+      <Filter>Components\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Cells\Cell.cpp">
+      <Filter>Components\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Cells\Portal.cpp">
+      <Filter>Components\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Game\Config.cpp">
+      <Filter>Components\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Game\Dice.cpp">
+      <Filter>Components\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Game\Menu.cpp">
+      <Filter>Components\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Game\Monopoly.cpp">
+      <Filter>Components\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Game\Script.cpp">
+      <Filter>Components\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Player\Bot.cpp">
+      <Filter>Components\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Player\IPlayer.cpp">
+      <Filter>Components\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Player\Player.cpp">
+      <Filter>Components\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Cells\Question.cpp">
+      <Filter>Components\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Game\Trade.cpp">
+      <Filter>Components\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Components\Cells\Business.h">
+      <Filter>Components\Cells</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Cells\Cell.h">
+      <Filter>Components\Cells</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Cells\Portal.h">
+      <Filter>Components\Cells</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Factory\Factory.h">
+      <Filter>Components\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Game\Config.h">
+      <Filter>Components\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Game\Dice.h">
+      <Filter>Components\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Game\Monopoly.h">
+      <Filter>Components\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Player\Bot.h">
+      <Filter>Components\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Player\IPlayer.h">
+      <Filter>Components\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Player\Player.h">
+      <Filter>Components\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Cells\Question.h">
+      <Filter>Components\Cells</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Components\Game\Menu.h">
+      <Filter>Components\Game</Filter>
+    </QtMoc>
+    <QtMoc Include="Components\Game\Script.h">
+      <Filter>Components\Game</Filter>
+    </QtMoc>
+    <QtMoc Include="Components\Game\Trade.h">
+      <Filter>Components\Game</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Components\Game\Menu.ui">
+      <Filter>Components\Game</Filter>
+    </QtUic>
+    <QtUic Include="Components\Game\Monopoly.ui">
+      <Filter>Components\Game</Filter>
+    </QtUic>
+    <QtUic Include="Components\Game\Trade.ui">
+      <Filter>Components\Game</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resourses\dataAttackTitans.json">
+      <Filter>resourses</Filter>
+    </None>
+  </ItemGroup>
+</Project>

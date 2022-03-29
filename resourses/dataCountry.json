@@ -1,0 +1,190 @@
+﻿[
+  {
+    "class": "Portal",
+    "properties": {
+      "id": 0
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 1,
+      "Business": "Germany",
+      "name": "Brandenburg Gate",
+      "cost": 60,
+      "business": 1
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 2,
+      "Business": "Germany",
+      "name": "Cologne Cathedral",
+      "cost": 70,
+      "business": 1
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 3,
+      "Business": "Spain",
+      "name": "Royal Palace of Madrid",
+      "cost": 100,
+      "business": 2
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 4,
+      "Business": "Spain",
+      "name": "Arena Las Ventas",
+      "cost": 110,
+      "business": 2
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 5,
+      "Business": "Spain",
+      "name": "Sagrada Familia",
+      "cost": 130,
+      "business": 2
+    }
+  },
+  {
+    "class": "Portal",
+    "properties": {
+      "id": 6
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 7,
+      "Business": "USA",
+      "name": "Washington Monument",
+      "cost": 200,
+      "business": 3
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 8,
+      "Business": "USA",
+      "name": "Empire State Building",
+      "cost": 200,
+      "business": 3
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 9,
+      "Business": "USA",
+      "name": "Statue of Liberty",
+      "cost": 240,
+      "business": 3
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 10,
+      "Business": "France",
+      "name": "Notre Dame De Paris",
+      "cost": 280,
+      "business": 4
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 11,
+      "Business": "France",
+      "name": "Louvre",
+      "cost": 280,
+      "business": 4
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 12,
+      "Business": "France",
+      "name": "Eiffel Tower",
+      "cost": 300,
+      "business": 4
+    }
+  },
+  {
+    "class": "Portal",
+    "properties": {
+      "id": 13
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 14,
+      "Business": "United_Kingdom",
+      "name": "Big Ben",
+      "cost": 350,
+      "business": 5
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 15,
+      "Business": "United_Kingdom",
+      "name": "Buckingham Palace",
+      "cost": 360,
+      "business": 5
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 16,
+      "Business": "United_Kingdom",
+      "name": "Stonehenge",
+      "cost": 360,
+      "business": 5
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 17,
+      "Business": "China",
+      "name": "Terracotta Army",
+      "cost": 450,
+      "business": 6
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 18,
+      "Business": "China",
+      "name": "Forbidden City",
+      "cost": 480,
+      "business": 6
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 19,
+      "Business": "China",
+      "name": "Great Wall of China",
+      "cost": 500,
+      "business": 6
+    }
+  }
+]

@@ -1,0 +1,193 @@
+﻿[
+  {
+    "class": "Portal",
+    "properties": {
+      "id": 0,
+      "image": "images/map0.gif"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 1,
+      "name": "Onyankopon",
+      "cost": 60,
+      "business": 1,
+      "image": "images/map1.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 2,
+      "name": "Yelena",
+      "cost": 70,
+      "business": 1,
+      "image": "images/map2.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 3,
+      "name": "Sasha Blouse",
+      "cost": 100,
+      "business": 2,
+      "image": "images/map3.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 4,
+      "name": "Jean Kirstein",
+      "cost": 110,
+      "business": 2,
+      "image": "images/map4.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 5,
+      "name": "Connie Springer",
+      "cost": 130,
+      "business": 2,
+      "image": "images/map5.png"
+    }
+  },
+  {
+    "class": "Question",
+    "properties": {
+      "id": 6,
+      "image": "images/question.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 7,
+      "name": "Colt Grice",
+      "cost": 200,
+      "business": 3,
+      "image": "images/map6.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 8,
+      "name": "Falco Grice",
+      "cost": 200,
+      "business": 3,
+      "image": "images/map7.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 9,
+      "name": "Gabi Braun",
+      "cost": 240,
+      "business": 3,
+      "image": "images/map8.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 10,
+      "name": "Reiner Braun",
+      "cost": 280,
+      "business": 4,
+      "image": "images/map9.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 11,
+      "name": "Bertolt Hoover",
+      "cost": 280,
+      "business": 4,
+      "image": "images/map10.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 12,
+      "name": "Annie Leonhart",
+      "cost": 300,
+      "business": 4,
+      "image": "images/map11.png"
+    }
+  },
+  {
+    "class": "Question",
+    "properties": {
+      "id": 13,
+      "image": "images/question.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 14,
+      "name": "Armin Arlert",
+      "cost": 350,
+      "business": 5,
+      "image": "images/map12.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 15,
+      "name": "Mikasa Ackerman",
+      "cost": 360,
+      "business": 5,
+      "image": "images/map13.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 16,
+      "name": "Eren Yeager",
+      "cost": 360,
+      "business": 5,
+      "image": "images/map14.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 17,
+      "name": "Hange Zoë",
+      "cost": 450,
+      "business": 6,
+      "image": "images/map15.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 18,
+      "name": "Levi Ackerman",
+      "cost": 480,
+      "business": 6,
+      "image": "images/map16.png"
+    }
+  },
+  {
+    "class": "Business",
+    "properties": {
+      "id": 19,
+      "name": "Erwin Smith",
+      "cost": 500,
+      "business": 6,
+      "image": "images/map17.png"
+    }
+  }
+]
