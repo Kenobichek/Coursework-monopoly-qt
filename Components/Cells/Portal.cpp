@@ -60,5 +60,13 @@ void Portal::setPlayerBought(std::shared_ptr<IPlayer> iplayer) {
 }
 
 void Portal::action(QTextBrowser* textBrowser, std::shared_ptr<IPlayer> iplayer) {
+	bool luck = rand() % 2;
+	if (luck) {
+		textBrowser->insertPlainText(QString::fromStdString("> You stepped on the portal leading to hell, looked aroundand and returned to the game\n"));
+	}
+	else {
+		textBrowser->insertPlainText(QString::fromStdString("> You stepped on a portal leading to hell, and there you died\n"));
+		iplayer->setInGame(false);
+	}
 
 }

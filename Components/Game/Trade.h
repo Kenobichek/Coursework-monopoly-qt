@@ -22,6 +22,7 @@ public:
 
 public slots:
 	void pushOK();
+	void backGame();
 
 private:
 	std::vector<std::shared_ptr<Cell>> mapMonopoly_;

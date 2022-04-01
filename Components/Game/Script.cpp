@@ -20,7 +20,6 @@ Script::Script(QWidget* parent)
 	connect(ui_.player2, SIGNAL(released()), this, SLOT(pushPlayer2()));
 	connect(ui_.player3, SIGNAL(released()), this, SLOT(pushPlayer3()));
 	connect(ui_.player4, SIGNAL(released()), this, SLOT(pushPlayer4()));
-
 }
 
 void Script::setMap() {
@@ -79,11 +78,6 @@ void Script::setPlayers() {
 	playersLabel_.push_back(ui_.player2);
 	playersLabel_.push_back(ui_.player3);
 	playersLabel_.push_back(ui_.player4);
-
-	for (int i = 0; i < 4; i++) {
-		playersLabel_[i]->setStyleSheet("background-color: " + colors_[i] + ";"); 
-		playersLabel_[i]->setEnabled(true);
-	}
 }
 
 void Script::setScriptPlayer(std::vector<std::shared_ptr<IPlayer>> players) {
@@ -101,17 +95,20 @@ void Script::setScriptBusiness(std::vector<std::vector<std::shared_ptr<Cell>>> b
 void Script::startGame() {
 	ui_.textBrowser->insertPlainText("> Welcome to the best monopoly\n");
 	ui_.textBrowser->setTextColor(QColor(colors_[activePlayer_]));
+
 	ui_.idMap->setEnabled(true);
 	ui_.horizontalSlider->setEnabled(true);
-	int notPlayers = 4 - players_.size();
-	int id = 3;
-	while (notPlayers != 0) {
-		playersLabel_[id]->setEnabled(false);
-		playersLabel_[id]->setStyleSheet("background-color: #c8c8c8;");
-		id--;
-		notPlayers--;
-	}
 	numberPlayers_ = players_.size();
+	for (int i = 0; i < 4; i++) {
+		if (i < numberPlayers_) {
+			playersLabel_[i]->setEnabled(true);
+			playersLabel_[i]->setStyleSheet("background-color: " + colors_[i] + ";");
+		}
+		else {
+			playersLabel_[i]->setEnabled(false);
+			playersLabel_[i]->setStyleSheet("background-color: #c8c8c8;");
+		}
+	}
 	if (numberPlayers_ <= 1) gameOver();
 	else {
 		disconnect(ui_.buttonAction, SIGNAL(released()), this, SLOT(startGame()));
@@ -194,9 +191,11 @@ void Script::fieldAction() {
 	else {
 		if (mapMonopoly_[players_[activePlayer_]->getPosition()]->isQuestion()) { // question
 			mapMonopoly_[players_[activePlayer_]->getPosition()]->action(ui_.textBrowser, players_[activePlayer_]);
+			if (players_[activePlayer_]->getMoney() <= 0) playerLost();
 		}
-		else {
-			// portal
+		else {	// portal
+			mapMonopoly_[players_[activePlayer_]->getPosition()]->action(ui_.textBrowser, players_[activePlayer_]);
+			if (!players_[activePlayer_]->getInGame()) playerLost();
 		}
 	}
 }
@@ -254,7 +253,7 @@ void Script::playerTax() {
 		playerLost();
 	}
 }
-
+ 
 void Script::playerLost() {
 	players_[activePlayer_]->setInGame(false);
 	numberPlayers_--;
@@ -268,6 +267,10 @@ void Script::playerLost() {
 	}
 	playersLabel_[players_[activePlayer_]->getID()]->setEnabled(false);
 	playersLabel_[players_[activePlayer_]->getID()]->setStyleSheet("background-color: #c8c8c8;");
+
+	ui_.buttonTax->setEnabled(false);
+	ui_.buttonSkip->setEnabled(false);
+	ui_.buttonAction->setEnabled(true);
 
 	if (numberPlayers_ <= 1) gameOver();
 }
@@ -337,8 +340,11 @@ void Script::pushPlus() {
 void Script::trade() {
 	ui_.buttonTrade->setEnabled(false);
 	trade_.show();
-	ui_.buttonAction->setText(ui_.buttonAction->text() + QString::fromStdString(" + UPDATE MAP"));
-	connect(ui_.buttonAction, SIGNAL(released()), this, SLOT(updateMap()));
+	ui_.buttonAction->setEnabled(false);
+	ui_.buttonSkip->setEnabled(true);
+	ui_.buttonSkip->setText(QString::fromStdString("UPDATE MAP"));
+	connect(ui_.buttonSkip, SIGNAL(released()), this, SLOT(updateMap()));
+	disconnect(ui_.buttonSkip, SIGNAL(released()), this, SLOT(skip()));
 }
 
 void Script::pushPlayer1() {
@@ -374,10 +380,14 @@ void Script::pushPlayer4() {
 }
 
 void Script::updateMap() {
-	disconnect(ui_.buttonAction, SIGNAL(released()), this, SLOT(updateMap()));
+	if(ui_.buttonTax->isEnabled()) ui_.buttonSkip->setEnabled(false);
+	if (!ui_.buttonTax->isEnabled() && !ui_.buttonBuy->isEnabled()) { ui_.buttonAction->setEnabled(true); ui_.buttonSkip->setEnabled(true);}
+	ui_.buttonSkip->setText(QString::fromStdString("SKIP"));
+	disconnect(ui_.buttonSkip, SIGNAL(released()), this, SLOT(updateMap()));
 	for (int i = 0; i < mapMonopoly_.size(); i++) {
 		if (mapMonopoly_[i]->isBusiness() && mapMonopoly_[i]->getBought() != -1) {
 			cost_[i]->setStyleSheet("background-color: " + colors_[mapMonopoly_[i]->getBought()] + ";");
 		}
 	}
+	connect(ui_.buttonSkip, SIGNAL(released()), this, SLOT(skip()));
 }

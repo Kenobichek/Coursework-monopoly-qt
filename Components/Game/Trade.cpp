@@ -7,6 +7,7 @@ Trade::Trade(QWidget* parent)
 	QIcon winIcon("images/icon.png");
 	this->setWindowIcon(winIcon);
 	connect(tradeUI_.buttonOK, SIGNAL(released()), this, SLOT(pushOK()));
+	connect(tradeUI_.buttonBack, SIGNAL(released()), this, SLOT(backGame()));
 }
 
 void Trade::pushOK() {
@@ -29,7 +30,11 @@ void Trade::pushOK() {
 			mapMonopoly_[i]->setPlayerBought(player1_);
 		}
 	}
+	this->close();
+}
 
+void Trade::backGame() {
+	this->close();
 }
 
 void Trade::setPlayers(std::shared_ptr<IPlayer> player1, std::shared_ptr<IPlayer> player2) {
